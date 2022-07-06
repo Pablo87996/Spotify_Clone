@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+.left-menu{
+    background-color: aquamarine;
+    padding: 20px;
+    padding-bottom: 90px;
+    
+    display: grid;
+    grid-template-rows: 1fr 6fr 5fr 1fr;
+}
+
+.playing{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    
+    background-color: rebeccapurple;
+}
+
+.options div{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10%;
+}
+
+.options span{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.playlists{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.install{
+    display: flex;
+    align-items: flex-end;
+    
+    width: 100%;
+    margin-bottom: 5%;
+}
