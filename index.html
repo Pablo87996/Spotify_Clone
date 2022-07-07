@@ -10,24 +10,40 @@
     </head>
 
     <body>
-        <section class="left-menu">
+        <div></div>
+        <section class="menu-left">
             <div class="logo">
-                <h1>Spotify</h1>
+                <ion-icon name="play-back-circle"></ion-icon>
+                <h1>Replay</h1>
             </div>
 
             <div class="options">
-                <div>
-                    <span>Home</span>
-                    <span>Search</span>
-                    <span>Your Library</span>
+                <div class="options1">
+                    <div>
+                        <ion-icon name="home"></ion-icon>
+                        <span>Home</span>
+                    </div>
+                    <div>
+                        <ion-icon name="search-outline"></ion-icon>
+                        <span>Search</span>
+                    </div>
+                    <div>
+                        <ion-icon name="library-outline"></ion-icon>
+                        <span>Your Library</span>
+                    </div>
                 </div>
 
-                <div>
-                    <span>Create Playlist</span>
-                    <span>Liked Songs</span>
+                <div class="options2">
+                    <div>
+                        <ion-icon name="add"></ion-icon>
+                        <span>Create Playlist</span>
+                    </div>
+                    <div>
+                        <ion-icon name="heart"></ion-icon>
+                        <span>Liked Songs</span>
+                    </div>
                 </div>
             </div>
-            
             
             <div class="playlists">
                 <hr>
@@ -40,6 +56,7 @@
             </div>
 
             <div class="install">
+                <ion-icon name="download-outline"></ion-icon>
                 <span>Install App</li>
             </div>
         </section>
@@ -47,22 +64,24 @@
         <section>
             <header>
                 <div class="buttons-container">
-                    <div class="button-circle"><</div>
-                    <div class="button-circle">></div>
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
                 </div>
     
                 <div class="buttons-container">
-                    <div class="button-large"><h4>Upgrade</h4></div>
+                    <div class="button-large"><span>Upgrade</span></div>
                     
-                    <div class="button-large">
-                        <h4>User</h4>
+                    <div class="button-large" id="profile">
+                        <ion-icon name="person-circle"></ion-icon>
+                        <span>User</span>
+                        <ion-icon name="caret-down-sharp"></ion-icon>
                     </div>
                 </div>
             </header>
 
             <main>
     
-                <h1>Welcome</h1>
+                <h1>Hello, user</h1>
     
                 <section class="recently-played">
                     <div class="horizontal-card">
@@ -158,5 +177,8 @@
                 <div class="volume"></div>
             </div>
         </section>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
