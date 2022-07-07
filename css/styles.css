@@ -7,7 +7,7 @@
 body{
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1.5fr 5fr;
     height: 100vh;
 }
 
@@ -21,7 +21,7 @@ body{
 }
 
 .playing{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 90px;
@@ -53,4 +53,85 @@ body{
     
     width: 100%;
     margin-bottom: 5%;
+}
+
+main{
+    padding: 30px;
+    margin-top: 60px;
+
+    height: 110vh;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    width: 77%;
+}
+
+.buttons-container{
+    display: flex;
+    gap: 15px;
+}
+
+.buttons-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: navy;
+    color: #FFF;
+    
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    
+}
+
+.button-large{
+    background-color:cornflowerblue;
+    height: 30px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.recently-played{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    row-gap: 10px;
+
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.horizontal-card{
+    background-color: gainsboro;
+    height: 65px;
+    border-radius: 5px;
+}
+
+.made-for-you{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.vertical-card{
+    background-color: gainsboro;
+    border-radius: 5px;
+    height: 220px;
 }
