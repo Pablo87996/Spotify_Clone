@@ -10,17 +10,21 @@ body{
     position: relative;
     display: grid;
     grid-template-columns: 1.5fr 5fr;
-    height: 100vh;
+    height: 100%;
 
     font-family: 'Poppins', sans-serif;
     color: #FFF;
-    background-color: #03071e;
+    background: #03071e;
+    background: linear-gradient(0deg, rgba(3,8,40,1) 0%, rgba(3,8,40,1) 80%, rgba(0,17,113,1) 100%);
+    overflow: overlay;
 }
 
 .menu-left{
     background-color: #000;
-    padding: 20px;
+    padding-top: 20px;
     padding-bottom: 90px;
+    padding-left: 25px;
+    padding-right: 25px;
     width: 23%;
     height: 100%;
     
@@ -35,6 +39,7 @@ body{
 .logo{
     display: flex;
     align-items: center;
+    transform: translate(-5px);
 }
 
 .logo h1{
@@ -53,6 +58,7 @@ body{
     height: 90px;
     
     background-color: rebeccapurple;
+    visibility: hidden;
 }
 
 .options div{
@@ -66,6 +72,10 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.options1:first-child{
+    margin-top: 3%;
 }
 
 .options1{
@@ -101,7 +111,8 @@ body{
     flex-direction: column;
     gap: 5%;
 
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .install{
@@ -121,13 +132,12 @@ body{
 
 main{
     padding: 30px;
-    margin-top: 60px;
-
     height: 110vh;
 }
 
 header{
-    position: fixed;
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
 
@@ -135,9 +145,7 @@ header{
     padding-right: 30px;
     padding-top: 15px;
     padding-bottom: 15px;
-    width: 77%;
-
-    background-color: #03071e;
+    width: 100%;
 }
 
 .buttons-container{
@@ -152,21 +160,22 @@ header{
 }
 
 .button-large{
-    background-color:cornflowerblue;
-
-    height: 30px;
-    padding: 10px;
+    border: gray solid 0.5px;
+    height: 32px;
+    margin-left: 15px;
     border-radius: 20px;
+    padding: 15px;
 
     font-size: 13px;
     font-weight: 600;
 }
 
 .buttons-container ion-icon{
-    background-color:slategrey;
-    color: gainsboro;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFF;
     border-radius: 50%;
-    font-size: 30px;
+    font-size: 25px;
+    padding: 3px;
 }
 
 .recently-played{
@@ -181,9 +190,50 @@ header{
 }
 
 .horizontal-card{
-    background-color: gainsboro;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     height: 65px;
     border-radius: 5px;
+
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: #000 2px solid;
+    border-radius: 5px;
+}
+
+.thumb{
+    background-size: cover;
+    background-position: center;
+    
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 100%;
+    width: 64px; 
+}
+
+#thumb1{
+    background-image: url("../img/thumb1.png");
+}
+
+#thumb2{
+    background-image: url("../img/thumb2.png");
+}
+
+#thumb3{
+    background-image: url("../img/thumb3.png");
+    background-position: top;
+}
+
+#thumb4{
+    background-image: url("../img/thumb4.png");
+}
+
+#thumb5{
+    background-image: url("../img/thumb5.png");
+}
+
+#thumb6{
+    background-image: url("../img/thumb6.png");
 }
 
 .made-for-you{
@@ -194,23 +244,33 @@ header{
 }
 
 .vertical-card{
-    background-color: gainsboro;
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 5px;
     height: 220px;
 }
 
 #profile{
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
-    justify-content: space-between;
-    width: 100px;
+    justify-content: space-around;
+    width: 108px;
     padding: 0;
+    border: none;
 }
 
 #profile ion-icon{
     background-color: transparent;
     color: #FFF;
     font-size: 16px;
-    margin: 5px;
+}
+
+#profile ion-icon:first-child{
+    font-size: 32px;
+    transform: translate(-12%);
+}
+
+#profile span{
+    transform: translate(-8px);
 }
 
 h1{
@@ -229,4 +289,12 @@ hr{
     background-color: gray;
     height: 0.5px;
     opacity: 50%;
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.15);
 }
