@@ -6,16 +6,20 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
 body{
-    position: relative;
     display: grid;
     grid-template-columns: 1.5fr 5fr;
-    height: 100%;
+    min-height: 100%;
 
     font-family: 'Poppins', sans-serif;
     color: #FFF;
+    background: repeating-linear-gradient();
     background: #03071e;
-    background: linear-gradient(0deg, rgba(3,8,40,1) 0%, rgba(3,8,40,1) 80%, rgba(0,17,113,1) 100%);
+    background: linear-gradient(0deg, rgba(3,8,40,1) 0%, rgba(3,8,40,1) 80%, rgba(0,17,113,1) 100%) fixed;
     overflow: overlay;
 }
 
@@ -113,6 +117,8 @@ body{
 
     font-weight: 400;
     font-size: 14px;
+
+    overflow: auto;
 }
 
 .install{
@@ -132,7 +138,7 @@ body{
 
 main{
     padding: 30px;
-    height: 110vh;
+    min-height: 100%;
 }
 
 header{
@@ -192,55 +198,29 @@ header{
 }
 
 .horizontal-card{
-    display: flex;
+    display:flex;
     align-items: center;
     gap: 15px;
     height: 65px;
     border-radius: 5px;
 
     background-color: rgba(255, 255, 255, 0.15);
-    box-shadow: #000 2px solid;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.horizontal-card h4{
+    max-width: 50%;
 }
 
 .thumb{
-    background-size: cover;
-    background-position: center;
-    
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    height: 100%;
-    width: 64px; 
-}
-
-#thumb1{
-    background-image: url("../img/thumb1.png");
-}
-
-#thumb2{
-    background-image: url("../img/thumb2.png");
-}
-
-#thumb3{
-    background-image: url("../img/thumb3.png");
-    background-position: top;
-}
-
-#thumb4{
-    background-image: url("../img/thumb4.png");
-}
-
-#thumb5{
-    background-image: url("../img/thumb5.png");
-}
-
-#thumb6{
-    background-image: url("../img/thumb6.png");
+    width: 64px;
+    min-height: 65px;
 }
 
 .made-for-you{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 15px;
     gap: 20px;
 }
@@ -258,29 +238,11 @@ header{
 }
 
 .mix{
-    background-size: cover;
-
+    margin-bottom: 13px;  
     border-radius: 5px;
     height: 130px;
     width: 100%;
-    margin-bottom: 20px;
     background-color: rebeccapurple;
-}
-
-#mix-1{
-    background-image: url("../img/mix-1.jpg");
-}
-
-#mix-2{
-    background-image: url("../img/mix-2.jpg");
-}
-
-#mix-3{
-    background-image: url("../img/mix-3.png");
-}
-
-#mix-4{
-    background-image: url("../img/mix-4.jpg");
 }
 
 #profile{
@@ -331,4 +293,53 @@ hr{
 
 ::-webkit-scrollbar-thumb{
     background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* Media Queries */
+@media (max-width: 480px){
+    .menu-left{
+        display: none;
+    }
+
+    header{
+        display: none;
+    }
+
+    .made-for-you{
+        overflow-x: auto;
+    }
+
+    .vertical-card{
+        width: 160px;
+    }
+
+    .mix{
+        height: 125px;
+    }
+
+    main{
+        padding: 15px;
+        width: 100vw;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 1024px){
+
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (min-width: 1201px){
+
 }
